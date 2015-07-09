@@ -9,4 +9,4 @@ category: blog
 
 
 
-[BeiYuu]:    http://beiyuu.com  "BeiYuu"
+[Jabari_Bi]:    http://www.itechdog.com  "Jabari_Bi"
