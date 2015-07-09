@@ -1,11 +1,18 @@
-auto: true
-
-markdown: rdiscount
-pygments: true
-paginate: 8
-permalink: /:title
-
 title: Jabari_Bi
+email: ghostposix@gmail.com
+description: > # this means to ignore newlines until "baseurl:"
+  Write an awesome description for your new site here. You can edit this
+  line in _config.yml. It will appear in your document head meta (for
+  Google search results) and in your feed.xml site description.
+baseurl: "" # the subpath of your site, e.g. /blog/
 url: http://www.itechdog.com
 feed: /atom.xml
+
+weibo_username: jiabai
+github_username: jiabai
 author_info: <a href="http://www.itechdog.com/">Jabari_Bi</a>
+
+markdown: rdiscount
+highlighter: pygments
+# paginate: 8
+permalink: /:title
