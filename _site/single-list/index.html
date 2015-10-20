@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>单链表的一个装逼写法 | Jabari_Bi</title>
+    <meta name="author" content="BeiYuu" />
+    <meta name="renderer" content="webkit">
+    <meta name="description" content="Jabari's Blog" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="/css/default.css" type="text/css" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="alternate" type="application/atom+xml" title="Recent Entries" href="/atom.xml" />
+    <script src="/js/jquery-1.7.1.min.js" type="text/javascript"></script>
+</head>
+<body>
+
+    <div class="home-menu">
+        <div class="home-icon-con">
+            <a class="home-menu-icon" href="/">Jabari_Bi</a>
+            <a class="home-follow" href="#" title="Contact Me">+</a>
+        </div>
+        <div class="home-contact">
+            <a href="http://weibo.com/jiabai/" target="_blank" style="margin-left:-5px;"><img src="http://www.weibo.com/favicon.ico" alt="" width="25"/></a>
+            <a href="http://www.douban.com/people/Mark.Memory/" target="_blank" style="text-align:center;"><img src="http://www.douban.com/favicon.ico" alt="" width="22"/></a>
+            <a href="mailto:ghostposix@gmail.com" target="_blank" style="text-align:right"><img src="https://ssl.gstatic.com/ui/v1/icons/mail/favicon.ico" alt="" width="25"/></a>
+        </div>
+    </div>
+
+    <link rel="stylesheet" href="/js/prettify/prettify.css" />
+<style type="text/css">
+    body { background:#e8e8e8; }
+    @media screen and (max-width: 750px){
+        body { background:#fff; }
+    }
+    @media screen and (max-width: 1020px){
+        body { background:#fff; }
+    }
+</style>
+
+<div id="content">
+    <div class="entry">
+        <h1 class="entry-title"><a href="/single-list" title="单链表的一个装逼写法">单链表的一个装逼写法</a></h1>
+        <p class="entry-date">2014-07-12</p>
+        <h2>单链表的一个装逼写法</h2>
+
+<p>代码如下：</p>
+
+<pre><code>#include &lt;stdio.h&gt;
+#include &lt;stdint.h&gt;
+#include &lt;stdlib.h&gt;
+
+#define STAILQ_ENTRY(type)   \
+struct {                     \
+  struct type *stqe_next;    \
+}
+
+struct mbuf {
+  uint32_t           magic;   /* mbuf magic (const) */
+  STAILQ_ENTRY(mbuf) next;    /* next mbuf */
+  uint8_t            *pos;    /* read marker */
+  uint8_t            *last;   /* write marker */
+  uint8_t            *start;  /* start of buffer (const) */
+  uint8_t            *end;    /* end of buffer (const) */
+};
+
+#define STAILQ_HEAD(name, type)       \
+struct name {                         \
+  struct type *stqh_first;            \
+  struct type **stqh_last;            \
+}
+
+STAILQ_HEAD(mhdr, mbuf);
+
+#define STAILQ_NEXT(elm, field)    ((elm)-&gt;field.stqe_next)
+
+#define STAILQ_INSERT_TAIL(head, elm, field) do {  \
+  STAILQ_NEXT((elm), field) = NULL;                \
+  *(head)-&gt;stqh_last = (elm);                      \
+  (head)-&gt;stqh_last = &amp;STAILQ_NEXT((elm), field);  \
+} while (0)
+
+int main(void)
+{
+  struct mhdr *mhdr = malloc(sizeof(struct mhdr));
+  mhdr-&gt;stqh_first = NULL;
+  mhdr-&gt;stqh_last  = &amp;mhdr-&gt;stqh_first;
+
+  int i;
+  for (i = 0; i &lt; 16; i++) {
+    struct mbuf *mbuf = malloc(sizeof(struct mbuf));
+    STAILQ_INSERT_TAIL(mhdr, mbuf, next);
+    printf("%p ", mbuf);
+  }
+  printf("\n");
+
+  for (i = 0; i &lt; 16; i++) {
+    struct mbuf *mbuf = mhdr-&gt;stqh_first;
+    printf("%p ", mbuf);
+    mhdr-&gt;stqh_first = mhdr-&gt;stqh_first-&gt;next.stqe_next;
+  }
+  printf("\n");
+
+  return 0;
+}
+</code></pre>
+
+<p>输入结果如下：</p>
+
+<pre><code>[jabari@hbase-rs2-test ~]$ gcc a.c 
+[jabari@hbase-rs2-test ~]$ ./a.out 
+0x1804030 0x1804070 0x18040b0 0x18040f0 0x1804130 0x1804170 0x18041b0 0x18041f0 0x1804230 0x1804270 0x18042b0 0x18042f0 0x1804330 0x1804370 0x18043b0 0x18043f0 
+0x1804030 0x1804070 0x18040b0 0x18040f0 0x1804130 0x1804170 0x18041b0 0x18041f0 0x1804230 0x1804270 0x18042b0 0x18042f0 0x1804330 0x1804370 0x18043b0 0x18043f0
+</code></pre>
+
+    </div>
+<!--
+    <div class="sidenav">
+        <iframe width="100%" height="75" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=75&fansRow=2&ptype=1&speed=0&skin=5&isTitle=0&noborder=0&isWeibo=0&isFans=0&uid=1855270953&verifier=375b89d6&dpc=1"></iframe>
+    </div>
+-->
+    <div class="sidenav">
+    <iframe width="100%" height="75" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=550&fansRow=2&ptype=1&speed=0&skin=1&isTitle=0&noborder=0&isWeibo=0&isFans=0&uid=1649201900&verifier=f479351c&dpc=1"></iframe>
+    </div>
+    <div class="sidenav">
+        <h2>Blog</h2>
+        <ul class="artical-list">
+        
+            <li><a href="/single-list">单链表的一个装逼写法</a></li>
+        
+            <li><a href="/github-pages">使用Github Pages建独立博客</a></li>
+        
+            <li><a href="/why-blog">我为什么写博客？</a></li>
+        
+        </ul>
+
+        <h2>Opinion</h2>
+        <ul class="artical-list">
+        
+            <li><a href="/about-simplify">胡言乱语说简单</a></li>
+        
+        </ul>
+
+        <h2>Project</h2>
+        <ul class="artical-list">
+        
+            <li><a href="/tabby">Tabby</a></li>
+        
+            <li><a href="/notty-notes">Notty Notes</a></li>
+        
+            <li><a href="/overapi-cheatsheet">OverAPI</a></li>
+        
+            <li><a href="/raining-in-chrome">听雨</a></li>
+        
+        </ul>
+    </div>
+</div>
+
+<script src="/js/post.js" type="text/javascript"></script>
+
+
+    <script type="text/javascript">
+        $(function(){
+            $('.home-follow').click(function(e){
+                e.preventDefault();
+
+                if($('.home-contact').is(':visible')){
+                    $('.home-contact').slideUp(100);
+                }else{
+                    $('.home-contact').slideDown(100);
+                }
+            });
+        })
+    </script>
+</body>
+</html>
