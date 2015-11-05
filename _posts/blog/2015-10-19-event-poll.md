@@ -1,11 +1,11 @@
 ---
 layout: post
-title: 浅谈高性能服务开发
+title: 谈谈高性能服务开发
 description: 简单说一说现代高性能服务器的设计方法
 category: blog
 ---
 
-## 浅谈高性能服务开发
+## 谈谈高性能服务开发
 
 我先说一个现象。
 
