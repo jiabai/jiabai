@@ -1,4 +1,9 @@
-# <center><p>埋点方案调研</p></center>
+---
+layout: post
+title: 埋点方案汇总
+description: 各种数据埋点方案的汇总
+category: blog
+---
 
 先说从在线了解到的情况，在线数据收集用的是前端代码埋点方案，手动埋点，跟我们无线一样，但是埋得比较多。
 
