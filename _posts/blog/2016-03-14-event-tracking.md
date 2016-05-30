@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 埋点方案汇总
-description: 各种数据埋点方案的汇总
+description: 各种数据埋点方案的汇总。你家的数据埋点做得好吗？
 category: blog
 ---
 
