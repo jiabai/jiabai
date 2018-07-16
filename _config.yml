@@ -13,6 +13,6 @@ github_username: jiabai
 author_info: <a href="http://www.itechdog.com/">Jabari_Bi</a>
 
 markdown: rdiscount
-highlighter: pygments
+highlighter: rouge
 # paginate: 8
 permalink: /:categories/:title
