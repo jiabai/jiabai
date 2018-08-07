@@ -15,7 +15,7 @@ If you list all files inside your NN workspace directory, you'll see files inclu
 ```
 fsimage_0000000000000000000 (fsimage)
 fsimage_0000000000000000000.md5
-edits_0000000000000003414-0000000000000003451 (edit logs, there're many ones with different name)
+edits_0000000000000003414-0000000000000003451 (edit logs, there are many ones with different name)
 seen_txid (a separated file contains last seen transaction id)
 ```
 
