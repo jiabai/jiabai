@@ -36,6 +36,8 @@ hdfs namenode -initializeSharedEdits
 经过我的操作并观察发现，这个同步不一定能跟namenode完全一致，不明白这程序同步的依据是什么，同步之后journalnode和namenode的edits_inprogress会不一样，不过也不用担心，也不需要额外操作，过一会儿edits_inprogress就会一致了。
 还有一点要说，经过hdfs namenode -initializeSharedEdits命令同步的edits log只是最近的一部分，如果之前是非HA的运行过一段时间的集群，edits log会有很多也许有几千个，那么它只会同步最近一段时间的一部分edits log。
 
+---
+
 在standby namenode上执行：
 
 ```
@@ -43,6 +45,7 @@ hdfs namenode -bootstrapStandby
 ```
 
 我发现只同步了FsImage，没有同步edits log，同样不明白这个命令的原理了。
+【妈的智障，-bootstrapStandby本来就是只同步FsImage文件，edits log的load全靠从journalnode加载】
 
 不过也无所谓，直接scp active namenode的所有元数据到standby namenode的元数据目录下，直接启动standby namenode就OK。
 
