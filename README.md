@@ -1,8 +1,10 @@
 <div align="center">
 
+**English** · [简体中文](README-zh_CN.md)
+
 # Aaron-Bi
 
-做 Skills 的管理、分发和落地 —— 把 AI Agent 用得顺手一点
+Skills management, distribution, and rollout — making AI agents pleasant to work with.
 
 [![Profile views](https://komarev.com/ghpvc/?username=jiabai&color=0e75b6&style=flat)](https://github.com/jiabai)
 [![Followers](https://img.shields.io/github/followers/jiabai?color=0e75b6&style=flat)](https://github.com/jiabai?tab=followers)
@@ -10,33 +12,33 @@
 
 </div>
 
-## 关于我
+## About
 
-主要写 TypeScript 和 Python，JavaScript、C++、Shell 也写过一些。
+I mostly write TypeScript and Python, with some JavaScript, C++, and shell along the way.
 
-精力集中在 Agent 的工具层：Agent 的能力上限取决于它拿到的工具和上下文，所以我把时间花在「怎么让 Skills 好用、好管、好分发」这类问题上——而不是再造一个聊天框。
+I work on the tooling layer around agents. An agent is only as capable as the tools and context it is given, so I spend my time on questions like "how do we make skills easy to use, easy to govern, and easy to distribute" — rather than building yet another chat box.
 
-- Skills 的完整链路：上传 → 管理 → 分发
-- MCP 接入，Agent Skills 的工程化
-- 顺手做一点内容/视频 → 结构化信息的小工具
+- The full skills lifecycle: upload → manage → distribute
+- MCP integration and the engineering side of agent skills
+- Small tools that turn content or video into structured information
 
-## 主线项目
+## Featured
 
-| 项目 | 是什么 | 技术 |
+| Project | What it is | Stack |
 | --- | --- | --- |
-| **[skilldrive](https://github.com/jiabai/skilldrive)** | 面向 AI Agent 的私有 Skills 管理 SaaS：上传 → 管理 → 分发，多租户隔离 + Web 控制台 + REST API | `TypeScript` `Apache-2.0` |
-| **[awesome-skills](https://github.com/jiabai/awesome-skills)** | Agent Skills 合集与 Vibe Coding 方法论：项目启动、架构可视化、内容写作 | `Python` |
-| **[StudyMind](https://github.com/jiabai/StudyMind)** | 课堂学习辅助桌面应用：本地音视频转写（SenseVoice ONNX）+ AI 知识点摘要、思维导图大纲 | `TypeScript` `Tauri` `Python` |
-| **[FrameQ](https://github.com/jiabai/FrameQ)** | 影问：视频 → 转写 → 题目，从素材直接产出可练习的问题 | `TypeScript` `Apache-2.0` |
-| **[InsightFlow](https://github.com/jiabai/InsightFlow)** | 把任意网页文章变成 AI 出的思考题，读得更深 | `Python` `MIT` |
+| **[skilldrive](https://github.com/jiabai/skilldrive)** | A private skills management SaaS for AI agents: upload → manage → distribute, with multi-tenant isolation, a web console, and a REST API | `TypeScript` `Apache-2.0` |
+| **[awesome-skills](https://github.com/jiabai/awesome-skills)** | A collection of agent skills plus a Vibe Coding methodology: project kickoff, architecture visualization, content writing | `Python` |
+| **[StudyMind](https://github.com/jiabai/StudyMind)** | A desktop app for classroom learning: local audio/video transcription (SenseVoice ONNX) with AI summaries and mind-map outlines | `TypeScript` `Tauri` `Python` |
+| **[FrameQ](https://github.com/jiabai/FrameQ)** | Video → transcript → questions. Turns raw footage into practice questions | `TypeScript` `Apache-2.0` |
+| **[InsightFlow](https://github.com/jiabai/InsightFlow)** | Turns any web article into AI-crafted questions, so you read deeper | `Python` `MIT` |
 
-## 其他
+## Also
 
-- **[chromitrace](https://github.com/jiabai/chromitrace)** — 抓取 AI 平台的问答对与引用链接 · `TypeScript`
-- **[TaskPulse](https://github.com/jiabai/TaskPulse)** — 主从分布式任务执行框架：实时监控、故障自恢复、可视化操作 · `Python`
-- **[FinScraper](https://github.com/jiabai/FinScraper)** — 金融数据抓取 · `Python`
+- **[chromitrace](https://github.com/jiabai/chromitrace)** — Scrapes Q&A pairs and citation links from AI platforms · `TypeScript`
+- **[TaskPulse](https://github.com/jiabai/TaskPulse)** — A master-worker distributed task framework: live monitoring, self-healing, visual control · `Python`
+- **[FinScraper](https://github.com/jiabai/FinScraper)** — Financial data scraping · `Python`
 
-## 技术栈
+## Stack
 
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white)
 ![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white)
@@ -45,7 +47,7 @@
 ![Shell](https://img.shields.io/badge/Shell-4EAA25?logo=gnubash&logoColor=white)
 ![MCP](https://img.shields.io/badge/MCP-Agent%20Skills-6E56CF)
 
-## 数据
+## Stats
 
 <div align="center">
 
@@ -56,4 +58,4 @@
 
 ---
 
-有问题或者想聊 Agent 工具链，直接开 issue 就行。
+Open an issue if you want to talk agent tooling.
