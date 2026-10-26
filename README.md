@@ -6,7 +6,7 @@
 
 [![Profile views](https://komarev.com/ghpvc/?username=jiabai&color=0e75b6&style=flat)](https://github.com/jiabai)
 [![Followers](https://img.shields.io/github/followers/jiabai?color=0e75b6&style=flat)](https://github.com/jiabai?tab=followers)
-[![Blog](https://img.shields.io/badge/Blog-itechdog.com-0e75b6)](https://www.itechdog.com)
+[![Email](https://img.shields.io/badge/Email-ghostposix%40gmail.com-0e75b6?logo=gmail&logoColor=white)](mailto:ghostposix@gmail.com)
 
 </div>
 
