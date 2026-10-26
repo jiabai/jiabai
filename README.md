@@ -26,7 +26,7 @@
 | --- | --- | --- |
 | **[skilldrive](https://github.com/jiabai/skilldrive)** | 面向 AI Agent 的私有 Skills 管理 SaaS：上传 → 管理 → 分发，多租户隔离 + Web 控制台 + REST API | `TypeScript` `Apache-2.0` |
 | **[awesome-skills](https://github.com/jiabai/awesome-skills)** | Agent Skills 合集与 Vibe Coding 方法论：项目启动、架构可视化、内容写作 | `Python` |
-| **[open-skillhub-mcp](https://github.com/jiabai/open-skillhub-mcp)** | 把 Skills 能力通过 MCP 暴露给任意 Agent | `Python` `Apache-2.0` |
+| **[StudyMind](https://github.com/jiabai/StudyMind)** | 课堂学习辅助桌面应用：本地音视频转写（SenseVoice ONNX）+ AI 知识点摘要、思维导图大纲 | `TypeScript` `Tauri` `Python` |
 | **[FrameQ](https://github.com/jiabai/FrameQ)** | 影问：视频 → 转写 → 题目，从素材直接产出可练习的问题 | `TypeScript` `Apache-2.0` |
 | **[InsightFlow](https://github.com/jiabai/InsightFlow)** | 把任意网页文章变成 AI 出的思考题，读得更深 | `Python` `MIT` |
 
@@ -35,7 +35,6 @@
 - **[chromitrace](https://github.com/jiabai/chromitrace)** — 抓取 AI 平台的问答对与引用链接 · `TypeScript`
 - **[TaskPulse](https://github.com/jiabai/TaskPulse)** — 主从分布式任务执行框架：实时监控、故障自恢复、可视化操作 · `Python`
 - **[FinScraper](https://github.com/jiabai/FinScraper)** — 金融数据抓取 · `Python`
-- **[StudyMind](https://github.com/jiabai/StudyMind)** · `TypeScript` `MIT`
 
 ## 技术栈
 
