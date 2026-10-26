@@ -2,7 +2,7 @@
 
 # Aaron-Bi
 
-把 AI Agent 用得顺手一点 —— 做 Skills 的管理、分发和落地。
+做 Skills 的管理、分发和落地 —— 把 AI Agent 用得顺手一点
 
 [![Profile views](https://komarev.com/ghpvc/?username=jiabai&color=0e75b6&style=flat)](https://github.com/jiabai)
 [![Followers](https://img.shields.io/github/followers/jiabai?color=0e75b6&style=flat)](https://github.com/jiabai?tab=followers)
